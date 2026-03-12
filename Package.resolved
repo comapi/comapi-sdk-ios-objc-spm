@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "socketrocketspm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/flashphoner/SocketRocketSPM.git",
+      "state" : {
+        "revision" : "842c741962b6a715a95e4977f477eafc3d89a370",
+        "version" : "1.0.2"
+      }
+    }
+  ],
+  "version" : 2
+}
