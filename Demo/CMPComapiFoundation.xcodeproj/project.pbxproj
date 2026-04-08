@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FB8043827438E2927866A4F /* Pods_Shared_ComapiFoundationSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CD7F048D7EF2A92A6CF1E7 /* Pods_Shared_ComapiFoundationSample.framework */; };
 		316EA9A32F59926300F2885F /* CMPComapiFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 316EA9A22F59926300F2885F /* CMPComapiFoundation */; settings = {ATTRIBUTES = (Required, ); }; };
 		316EA9A52F59937F00F2885F /* CMPComapiFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 316EA9A42F59937F00F2885F /* CMPComapiFoundation */; };
 		316EA9A72F59DACD00F2885F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316EA9A62F59DACD00F2885F /* Security.framework */; };
@@ -122,7 +121,7 @@
 		89EA5CDA214962AC00C29D08 /* CMPProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EA5CD9214962AC00C29D08 /* CMPProfileViewController.m */; };
 		89EA5CDD214962C900C29D08 /* CMPProfileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EA5CDC214962C900C29D08 /* CMPProfileViewModel.m */; };
 		89EA5CE4214967D800C29D08 /* CMPTitledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EA5CE3214967D800C29D08 /* CMPTitledCell.m */; };
-		D63DAA36BD425AA948ABB5E2 /* Pods_Shared_ComapiFoundationSample_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4785D7B1A753E2B9F7E8E47 /* Pods_Shared_ComapiFoundationSample_Swift.framework */; };
+		AABBCC001111EEEE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AABBCC001111FFFF /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -151,10 +150,6 @@
 /* Begin PBXFileReference section */
 		316EA99B2F588EA600F2885F /* comapi-sdk-ios-spm */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "comapi-sdk-ios-spm"; path = ..; sourceTree = "<group>"; };
 		316EA9A62F59DACD00F2885F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		631221202849C7DE27DA3D63 /* Pods-Shared-ComapiFoundationSample-Swift.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-ComapiFoundationSample-Swift.staging.xcconfig"; path = "Target Support Files/Pods-Shared-ComapiFoundationSample-Swift/Pods-Shared-ComapiFoundationSample-Swift.staging.xcconfig"; sourceTree = "<group>"; };
-		733AFD283AEAA8BDC519EA07 /* Pods-Shared-ComapiFoundationSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-ComapiFoundationSample-Swift.debug.xcconfig"; path = "Target Support Files/Pods-Shared-ComapiFoundationSample-Swift/Pods-Shared-ComapiFoundationSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		7C74F3B303747ACCB109769A /* Pods-Shared-ComapiFoundationSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-ComapiFoundationSample.debug.xcconfig"; path = "Target Support Files/Pods-Shared-ComapiFoundationSample/Pods-Shared-ComapiFoundationSample.debug.xcconfig"; sourceTree = "<group>"; };
-		88CD7F048D7EF2A92A6CF1E7 /* Pods_Shared_ComapiFoundationSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shared_ComapiFoundationSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8915FE9A225611BC00EB9A4A /* ComapiFoundationSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ComapiFoundationSample.entitlements; sourceTree = "<group>"; };
 		8915FE9B225611C200EB9A4A /* ComapiFoundationSample-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ComapiFoundationSample-Swift.entitlements"; sourceTree = "<group>"; };
 		89259E7121524F3A00C73A02 /* CMPProfileDetailsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPProfileDetailsView.h; sourceTree = "<group>"; };
@@ -330,10 +325,6 @@
 		89EA5CDC214962C900C29D08 /* CMPProfileViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPProfileViewModel.m; sourceTree = "<group>"; };
 		89EA5CE2214967D800C29D08 /* CMPTitledCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPTitledCell.h; sourceTree = "<group>"; };
 		89EA5CE3214967D800C29D08 /* CMPTitledCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPTitledCell.m; sourceTree = "<group>"; };
-		91430C4BDBB9024848F26581 /* Pods-Shared-ComapiFoundationSample.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-ComapiFoundationSample.staging.xcconfig"; path = "Target Support Files/Pods-Shared-ComapiFoundationSample/Pods-Shared-ComapiFoundationSample.staging.xcconfig"; sourceTree = "<group>"; };
-		BA39311F2D3303F828C826B6 /* Pods-Shared-ComapiFoundationSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-ComapiFoundationSample-Swift.release.xcconfig"; path = "Target Support Files/Pods-Shared-ComapiFoundationSample-Swift/Pods-Shared-ComapiFoundationSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
-		D532954CAED159560A9F530F /* Pods-Shared-ComapiFoundationSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-ComapiFoundationSample.release.xcconfig"; path = "Target Support Files/Pods-Shared-ComapiFoundationSample/Pods-Shared-ComapiFoundationSample.release.xcconfig"; sourceTree = "<group>"; };
-		E4785D7B1A753E2B9F7E8E47 /* Pods_Shared_ComapiFoundationSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shared_ComapiFoundationSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,7 +334,6 @@
 			files = (
 				316EA9A72F59DACD00F2885F /* Security.framework in Frameworks */,
 				316EA9A32F59926300F2885F /* CMPComapiFoundation in Frameworks */,
-				2FB8043827438E2927866A4F /* Pods_Shared_ComapiFoundationSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				316EA9A52F59937F00F2885F /* CMPComapiFoundation in Frameworks */,
-				D63DAA36BD425AA948ABB5E2 /* Pods_Shared_ComapiFoundationSample_Swift.framework in Frameworks */,
+				AABBCC001111EEEE /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,8 +353,6 @@
 			isa = PBXGroup;
 			children = (
 				316EA9A62F59DACD00F2885F /* Security.framework */,
-				88CD7F048D7EF2A92A6CF1E7 /* Pods_Shared_ComapiFoundationSample.framework */,
-				E4785D7B1A753E2B9F7E8E47 /* Pods_Shared_ComapiFoundationSample_Swift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1049,8 +1037,6 @@
 				89957A66213935E0008EE0BE /* ComapiFoundationSample */,
 				89E459D421ABFDDA002C26AE /* ComapiFoundationSample-Swift */,
 				89C8DE3F2122DF3C00555495 /* Products */,
-				F698CE1B51A5412278830598 /* Pods */,
-				89E01D3F231685C0005F6A77 /* Config */,
 				0283F3BFD067A4BC84703AC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -1197,13 +1183,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		89E01D3F231685C0005F6A77 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
 		89E459D421ABFDDA002C26AE /* ComapiFoundationSample-Swift */ = {
 			isa = PBXGroup;
 			children = (
@@ -1281,19 +1260,6 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		F698CE1B51A5412278830598 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7C74F3B303747ACCB109769A /* Pods-Shared-ComapiFoundationSample.debug.xcconfig */,
-				91430C4BDBB9024848F26581 /* Pods-Shared-ComapiFoundationSample.staging.xcconfig */,
-				D532954CAED159560A9F530F /* Pods-Shared-ComapiFoundationSample.release.xcconfig */,
-				733AFD283AEAA8BDC519EA07 /* Pods-Shared-ComapiFoundationSample-Swift.debug.xcconfig */,
-				631221202849C7DE27DA3D63 /* Pods-Shared-ComapiFoundationSample-Swift.staging.xcconfig */,
-				BA39311F2D3303F828C826B6 /* Pods-Shared-ComapiFoundationSample-Swift.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1301,12 +1267,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89957A78213935E3008EE0BE /* Build configuration list for PBXNativeTarget "ComapiFoundationSample" */;
 			buildPhases = (
-				8E811AE0C1657BB3510F99D5 /* [CP] Check Pods Manifest.lock */,
 				89957A61213935E0008EE0BE /* Sources */,
 				89957A62213935E0008EE0BE /* Frameworks */,
 				89957A63213935E0008EE0BE /* Resources */,
 				89E39C6922D7559800EF794F /* Embed Frameworks */,
-				5DB123F95443F6B038CD2102 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1325,12 +1289,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89E459E221ABFDDD002C26AE /* Build configuration list for PBXNativeTarget "ComapiFoundationSample-Swift" */;
 			buildPhases = (
-				1EA203B13A0231433ABBDB65 /* [CP] Check Pods Manifest.lock */,
 				89E459CF21ABFDDA002C26AE /* Sources */,
 				89E459D021ABFDDA002C26AE /* Frameworks */,
 				89E459D121ABFDDA002C26AE /* Resources */,
 				8939219623295AE5008C5EDD /* Embed Frameworks */,
-				D03F70E4F56170E5AA213918 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1340,6 +1302,7 @@
 			name = "ComapiFoundationSample-Swift";
 			packageProductDependencies = (
 				316EA9A42F59937F00F2885F /* CMPComapiFoundation */,
+				AABBCC001111FFFF /* SnapKit */,
 			);
 			productName = SampleAppSwift;
 			productReference = 89E459D321ABFDDA002C26AE /* ComapiFoundationSample-Swift.app */;
@@ -1389,6 +1352,9 @@
 				Base,
 			);
 			mainGroup = 89C8DE342122DF3C00555495;
+			packageReferences = (
+				AABBCC002222BBBB /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 89C8DE3F2122DF3C00555495 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1419,87 +1385,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1EA203B13A0231433ABBDB65 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Shared-ComapiFoundationSample-Swift-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5DB123F95443F6B038CD2102 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Shared-ComapiFoundationSample/Pods-Shared-ComapiFoundationSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Shared-ComapiFoundationSample/Pods-Shared-ComapiFoundationSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shared-ComapiFoundationSample/Pods-Shared-ComapiFoundationSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8E811AE0C1657BB3510F99D5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Shared-ComapiFoundationSample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D03F70E4F56170E5AA213918 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Shared-ComapiFoundationSample-Swift/Pods-Shared-ComapiFoundationSample-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Shared-ComapiFoundationSample-Swift/Pods-Shared-ComapiFoundationSample-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shared-ComapiFoundationSample-Swift/Pods-Shared-ComapiFoundationSample-Swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		89957A61213935E0008EE0BE /* Sources */ = {
@@ -1656,7 +1541,6 @@
 /* Begin XCBuildConfiguration section */
 		89957A79213935E3008EE0BE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C74F3B303747ACCB109769A /* Pods-Shared-ComapiFoundationSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ComapiFoundationSample/ComapiFoundationSample.entitlements;
@@ -1666,7 +1550,7 @@
 				DEVELOPMENT_TEAM = JE27K8BAX2;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ComapiFoundationSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1682,7 +1566,6 @@
 		};
 		89957A7A213935E3008EE0BE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D532954CAED159560A9F530F /* Pods-Shared-ComapiFoundationSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ComapiFoundationSample/ComapiFoundationSample.entitlements;
@@ -1692,7 +1575,7 @@
 				DEVELOPMENT_TEAM = JE27K8BAX2;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ComapiFoundationSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1758,7 +1641,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
@@ -1813,7 +1696,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
@@ -1876,7 +1759,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
@@ -1887,7 +1770,6 @@
 		};
 		89E01D3D2316858D005F6A77 /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91430C4BDBB9024848F26581 /* Pods-Shared-ComapiFoundationSample.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ComapiFoundationSample/ComapiFoundationSample.entitlements;
@@ -1897,7 +1779,7 @@
 				DEVELOPMENT_TEAM = JE27K8BAX2;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ComapiFoundationSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1913,7 +1795,6 @@
 		};
 		89E01D3E2316858D005F6A77 /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 631221202849C7DE27DA3D63 /* Pods-Shared-ComapiFoundationSample-Swift.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
@@ -1924,7 +1805,7 @@
 				DEVELOPMENT_TEAM = JE27K8BAX2;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ComapiFoundationSample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1948,7 +1829,6 @@
 		};
 		89E459E321ABFDDD002C26AE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 733AFD283AEAA8BDC519EA07 /* Pods-Shared-ComapiFoundationSample-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
@@ -1959,7 +1839,7 @@
 				DEVELOPMENT_TEAM = JE27K8BAX2;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ComapiFoundationSample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1983,7 +1863,6 @@
 		};
 		89E459E421ABFDDD002C26AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA39311F2D3303F828C826B6 /* Pods-Shared-ComapiFoundationSample-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
@@ -1994,7 +1873,7 @@
 				DEVELOPMENT_TEAM = JE27K8BAX2;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ComapiFoundationSample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2050,6 +1929,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		AABBCC002222BBBB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		316EA9A22F59926300F2885F /* CMPComapiFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -2058,6 +1948,11 @@
 		316EA9A42F59937F00F2885F /* CMPComapiFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CMPComapiFoundation;
+		};
+		AABBCC001111FFFF /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AABBCC002222BBBB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

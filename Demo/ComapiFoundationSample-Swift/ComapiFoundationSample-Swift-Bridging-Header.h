@@ -16,18 +16,4 @@
 #else
 @import CMPComapiFoundation;
 #endif
-#if __has_include(<Base64/MF_Base64Additions.h>)
-#import <Base64/MF_Base64Additions.h>
-#elif __has_include(<MF_Base64Additions.h>)
-#import <MF_Base64Additions.h>
-#else
-@import Base64;
-#endif
 
-#if __has_include(<JWT/JWT.h>)
-#import <JWT/JWT.h>
-#elif __has_include(<JWT.h>)
-#import <JWT.h>
-#else
-@import JWT;
-#endif

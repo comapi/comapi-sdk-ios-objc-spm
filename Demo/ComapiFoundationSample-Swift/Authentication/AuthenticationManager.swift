@@ -16,39 +16,62 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-import JWT
+import Foundation
+import CommonCrypto
 
 class JWTokenGenerator {
-    
+
     struct AuthHeaders {
         static let HeaderType = "JWT"
     }
-    
+
     static func generate(tokenFor nonce: String, profileId: String, issuer: String, audience: String, secret: String) -> String {
         let now = Date()
         let exp = Calendar.current.date(byAdding: .day, value: 30, to: now)!
-        
-        let base64SecretKey = secret.data(using: .utf8)!
-        
-        let headers = ["typ" : NSString.init(string: AuthHeaders.HeaderType)] as [AnyHashable : Any]
-        
-        let claims = ["nonce" : NSString.init(string: nonce),
-                      "sub" : NSString.init(string: profileId),
-                      "iss" : NSString.init(string: issuer),
-                      "aud" : NSString.init(string: audience),
-                      "iat" : NSNumber(value: now.timeIntervalSince1970),
-                      "exp" : NSNumber(value: exp.timeIntervalSince1970)] as [AnyHashable : Any]
-        
-        let algorithm = JWTAlgorithmFactory.algorithm(byName: "HS256")
-        
-        let e = JWTBuilder.encodePayload(claims)!
-        
-        let h = e.headers(headers)!
-        let s = h.secretData(base64SecretKey)!
-        let b = s.algorithm(algorithm)!
-        let token = b.encode
-        
-        print(token!)
-        return token!
+
+        let header: [String: Any] = ["alg": "HS256", "typ": AuthHeaders.HeaderType]
+        let claims: [String: Any] = [
+            "nonce": nonce,
+            "sub": profileId,
+            "iss": issuer,
+            "aud": audience,
+            "iat": Int(now.timeIntervalSince1970),
+            "exp": Int(exp.timeIntervalSince1970)
+        ]
+
+        let headerData = try! JSONSerialization.data(withJSONObject: header)
+        let claimsData = try! JSONSerialization.data(withJSONObject: claims)
+
+        let headerEncoded = base64URLEncode(headerData)
+        let claimsEncoded = base64URLEncode(claimsData)
+        let signingInput = "\(headerEncoded).\(claimsEncoded)"
+
+        let signingData = signingInput.data(using: .utf8)!
+        let secretData = secret.data(using: .utf8)!
+        let signature = hmacSHA256(data: signingData, key: secretData)
+
+        let token = "\(signingInput).\(signature)"
+        print(token)
+        return token
+    }
+
+    private static func base64URLEncode(_ data: Data) -> String {
+        return data.base64EncodedString()
+            .replacingOccurrences(of: "+", with: "-")
+            .replacingOccurrences(of: "/", with: "_")
+            .replacingOccurrences(of: "=", with: "")
+    }
+
+    private static func hmacSHA256(data: Data, key: Data) -> String {
+        var digest = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
+        data.withUnsafeBytes { dataBytes in
+            key.withUnsafeBytes { keyBytes in
+                CCHmac(CCHmacAlgorithm(kCCHmacAlgSHA256),
+                       keyBytes.baseAddress, key.count,
+                       dataBytes.baseAddress, data.count,
+                       &digest)
+            }
+        }
+        return base64URLEncode(Data(digest))
     }
 }
