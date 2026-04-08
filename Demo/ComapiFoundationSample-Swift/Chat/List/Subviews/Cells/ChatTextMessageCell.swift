@@ -16,7 +16,8 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-
+import UIKit
+import SnapKit
 
 class ChatTextMessageCell: BaseTableViewCell {
 

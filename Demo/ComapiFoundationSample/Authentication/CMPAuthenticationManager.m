@@ -17,28 +17,49 @@
 //
 
 #import "CMPAuthenticationManager.h"
+#import <CommonCrypto/CommonHMAC.h>
 
-#import <JWT/JWT.h>
+static NSString *base64URLEncode(NSData *data) {
+    NSString *base64 = [data base64EncodedStringWithOptions:0];
+    base64 = [base64 stringByReplacingOccurrencesOfString:@"+" withString:@"-"];
+    base64 = [base64 stringByReplacingOccurrencesOfString:@"/" withString:@"_"];
+    base64 = [base64 stringByReplacingOccurrencesOfString:@"=" withString:@""];
+    return base64;
+}
 
 @implementation CMPAuthenticationManager
 
 + (NSString *)generateTokenForNonce:(NSString *)nonce profileID:(NSString *)profileID issuer:(NSString *)issuer audience:(NSString *)audience secret:(NSString *)secret {
     NSDate *now = [NSDate date];
     NSDate *exp = [NSCalendar.currentCalendar dateByAddingUnit:NSCalendarUnitDay value:30 toDate:now options:0];
-    
-    NSDictionary *headers = @{@"typ" : @"JWT"};
-    NSDictionary *payload = @{@"nonce" : nonce,
-                               @"sub" : profileID,
-                               @"iss" : issuer,
-                               @"aud" : audience,
-                               @"iat" : [NSNumber numberWithDouble:now.timeIntervalSince1970],
-                               @"exp" : [NSNumber numberWithDouble:exp.timeIntervalSince1970]};
-    
+
+    NSDictionary *header = @{@"alg": @"HS256", @"typ": @"JWT"};
+    NSDictionary *payload = @{@"nonce": nonce,
+                               @"sub": profileID,
+                               @"iss": issuer,
+                               @"aud": audience,
+                               @"iat": @((long long)now.timeIntervalSince1970),
+                               @"exp": @((long long)exp.timeIntervalSince1970)};
+
+    NSData *headerData = [NSJSONSerialization dataWithJSONObject:header options:0 error:nil];
+    NSData *payloadData = [NSJSONSerialization dataWithJSONObject:payload options:0 error:nil];
+
+    NSString *headerEncoded = base64URLEncode(headerData);
+    NSString *payloadEncoded = base64URLEncode(payloadData);
+    NSString *signingInput = [NSString stringWithFormat:@"%@.%@", headerEncoded, payloadEncoded];
+
+    NSData *signingData = [signingInput dataUsingEncoding:NSUTF8StringEncoding];
     NSData *secretData = [secret dataUsingEncoding:NSUTF8StringEncoding];
-    id<JWTAlgorithm> algorithm = [JWTAlgorithmFactory algorithmByName:@"HS256"];
-    
-    NSString *token = [JWTBuilder encodePayload:payload].headers(headers).secretData(secretData).algorithm(algorithm).encode;
-    return token;
+
+    uint8_t digest[CC_SHA256_DIGEST_LENGTH];
+    CCHmac(kCCHmacAlgSHA256,
+           secretData.bytes, secretData.length,
+           signingData.bytes, signingData.length,
+           digest);
+    NSData *signatureData = [NSData dataWithBytes:digest length:CC_SHA256_DIGEST_LENGTH];
+    NSString *signature = base64URLEncode(signatureData);
+
+    return [NSString stringWithFormat:@"%@.%@", signingInput, signature];
 }
 
 @end
