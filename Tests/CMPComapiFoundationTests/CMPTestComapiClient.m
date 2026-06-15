@@ -866,4 +866,23 @@
     [self waitForExpectations:@[expectation] timeout:15.0];
 }
 
+- (void)testIsDotdigitalOriginated_whenTrue {
+    NSDictionary *payload = @{ @"dd_originated": @YES };
+    XCTAssertTrue([CMPComapiClient isDotdigitalOriginated:payload]);
+}
+
+- (void)testIsDotdigitalOriginated_whenFalse {
+    NSDictionary *payload = @{ @"dd_originated": @NO };
+    XCTAssertFalse([CMPComapiClient isDotdigitalOriginated:payload]);
+}
+
+- (void)testIsDotdigitalOriginated_whenKeyAbsent {
+    NSDictionary *payload = @{ @"dd_deepLink": @{ @"url": @"https://example.com" } };
+    XCTAssertFalse([CMPComapiClient isDotdigitalOriginated:payload]);
+}
+
+- (void)testIsDotdigitalOriginated_whenEmptyPayload {
+    XCTAssertFalse([CMPComapiClient isDotdigitalOriginated:@{}]);
+}
+
 @end
